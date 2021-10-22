@@ -13,13 +13,13 @@ namespace SerilogAppConfigNet4x
             // environment variables are per-process (inherited from their parent process)
             Environment.SetEnvironmentVariable("BASEDIR", Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
 
-            ILogger log = new LoggerConfiguration()
+            Log.Logger = new LoggerConfiguration()
                 .ReadFrom.AppSettings()
                 .CreateLogger();
 
-            log.Information("App start");
+            Log.Information("App start");
 
-            log.Information("App end");
+            Log.Information("App end");
         }
     }
 }
