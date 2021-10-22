@@ -21,13 +21,13 @@ namespace SerilogM.E.C
 
             var configuration = configurationBuilder.Build();
 
-            ILogger log = new LoggerConfiguration()
+            Log.Logger = new LoggerConfiguration()
                 .ReadFrom.Configuration(configuration)
                 .CreateLogger();
 
-            log.Information("App start");
+            Log.Information("App start");
 
-            log.Information("App end");
+            Log.Information("App end");
         }
     }
 }
