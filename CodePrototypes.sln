@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31112.23
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerilogAppConfigNet4x", "SerilogAppConfigNet4x\SerilogAppConfigNet4x.csproj", "{6A2B2379-565B-48C1-976D-5411D14360C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerilogM.E.C", "SerilogM.E.C\SerilogM.E.C.csproj", "{A8102251-0E22-4447-9700-4FC8A2E4A610}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerilogM.E.C", "SerilogM.E.C\SerilogM.E.C.csproj", "{A8102251-0E22-4447-9700-4FC8A2E4A610}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Templates", "Templates\Templates.csproj", "{5D8DE5C3-18CD-42E8-8E0C-2A546D0F274A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{A8102251-0E22-4447-9700-4FC8A2E4A610}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8102251-0E22-4447-9700-4FC8A2E4A610}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8102251-0E22-4447-9700-4FC8A2E4A610}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D8DE5C3-18CD-42E8-8E0C-2A546D0F274A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D8DE5C3-18CD-42E8-8E0C-2A546D0F274A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D8DE5C3-18CD-42E8-8E0C-2A546D0F274A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D8DE5C3-18CD-42E8-8E0C-2A546D0F274A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
