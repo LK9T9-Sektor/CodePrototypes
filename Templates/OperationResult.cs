@@ -17,18 +17,18 @@ public class OperationResult
 
     public bool IsSuccess => string.IsNullOrEmpty(_error);
 
-    public void AddError(string? errorMessage)
-    {
-        _error = errorMessage;
-    }
-
     /// <summary>
     /// Неудачное выполнение операции
     /// </summary>
     /// <param name="errorMessage">Текст ошибки</param>
     /// <returns></returns>
-    public static OperationResult Fail(string errorMessage)
+    public static OperationResult Fail(string? errorMessage)
     {
+        if (string.IsNullOrEmpty(errorMessage))
+        {
+            errorMessage = ErrorWithoutDescription;
+        }
+
         return new OperationResult(errorMessage);
     }
 
@@ -36,16 +36,13 @@ public class OperationResult
     /// Успешное выполнение операции
     /// </summary>
     /// <returns></returns>
-    public static OperationResult Success()
+    public static OperationResult Ok()
     {
         return new OperationResult();
     }
 
 }
 
-/// <summary>
-/// Результат выполнения операции, с данными типа T
-/// </summary>
 public class OperationResult<T> : OperationResult
 {
     protected internal OperationResult(T? data, string? errorMessage = null)
@@ -54,7 +51,7 @@ public class OperationResult<T> : OperationResult
         Data = data;
     }
 
-    public T? Data { get; private set; } = default!;
+    public T? Data { get; set; } = default!;
 
     public new bool IsSuccess => Data is not null && string.IsNullOrEmpty(_error);
 
@@ -78,7 +75,7 @@ public class OperationResult<T> : OperationResult
     /// </summary>
     /// <param name="data">Данные</param>
     /// <returns></returns>
-    public static OperationResult<T> Success(T data)
+    public static OperationResult<T> Ok(T data)
     {
         return new OperationResult<T>(data);
     }
